@@ -1,0 +1,7 @@
+*~
+*#
+.*#
+*.pyc
+.env
+Pathrika.egg-info/
+dist/
