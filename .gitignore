@@ -3,5 +3,7 @@
 .#*
 *.pyc
 .env
+pathrika_db
+pathrika/feeder/migrations
 Pathrika.egg-info/
 dist/

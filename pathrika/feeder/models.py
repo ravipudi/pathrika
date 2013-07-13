@@ -4,7 +4,7 @@ from django.db import models
 class Feed(models.Model):
     title = models.CharField(max_length=1024, blank=True)
     subtitle = models.TextField(blank=True)
-    url = models.URLField()
+    url = models.URLField(blank=True)
     rss_url = models.URLField("RSS URL")
     updated = models.DateTimeField(null=True, blank=True)
     processed = models.BooleanField(default=False)
@@ -16,7 +16,7 @@ class Feed(models.Model):
 class Article(models.Model):
     feed = models.ForeignKey(Feed)
     title = models.CharField(max_length=1024, blank=True)
-    url = models.URLField()
+    url = models.URLField(blank=True)
     rss_url = models.URLField("RSS URL")
     summary = models.TextField(blank=True)
     content = models.TextField(blank=True)
