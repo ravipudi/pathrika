@@ -53,4 +53,5 @@ STATICFILES_DIRS = (
 SECRET_KEY = '%4vx-5a%o)w%-z&ncybf20++ftcxwar2y35)_mh5068m!p6#)o'
 
 TEMPLATE_DIRS = (
+    '/home/superxor/base/pathrika/templates',
 )
