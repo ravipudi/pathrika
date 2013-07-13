@@ -53,7 +53,4 @@ STATICFILES_DIRS = (
 SECRET_KEY = '%4vx-5a%o)w%-z&ncybf20++ftcxwar2y35)_mh5068m!p6#)o'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
 )
