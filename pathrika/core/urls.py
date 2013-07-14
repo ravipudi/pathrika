@@ -1,10 +1,9 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from tastypie.api import Api
 
+from feed.api import ArticleResource, FeedResource
 urlpatterns = patterns(
     '',
     url(r'^add-feed/$',
@@ -15,3 +14,12 @@ urlpatterns = patterns(
         TemplateView.as_view(template_name='index.html'),
         name='home'),
 )
+
+
+v1_api = Api(api_name='v1')
+v1_api.register(ArticleResource)
+v1_api.register(FeedResource)
+
+urlpatterns += patterns('',
+                        (r'^api/', include(v1_api.urls)),
+                        )
