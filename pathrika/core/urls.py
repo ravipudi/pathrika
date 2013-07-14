@@ -3,7 +3,8 @@ from django.views.generic import TemplateView
 
 from tastypie.api import Api
 
-from feed.api import ArticleResource, FeedResource
+from feeder.api import ArticleResource, FeedResource
+
 urlpatterns = patterns(
     '',
     url(r'^add-feed/$',
@@ -20,6 +21,8 @@ v1_api = Api(api_name='v1')
 v1_api.register(ArticleResource)
 v1_api.register(FeedResource)
 
-urlpatterns += patterns('',
-                        (r'^api/', include(v1_api.urls)),
-                        )
+urlpatterns += patterns(
+    '',
+    (r'^v1/',
+     include(v1_api.urls)),
+)
