@@ -1,10 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Pathrika - Feed Reader</title>
-  </head>
-  <body>
-    {% block content %}
-    <p>You are in the index</p>
-    {% endblock %}
-  </body>
+<head>
+    <meta charset="utf-8" />
+    <title>Pathrika Reader</title>
+    <link rel="stylesheet" href="/css/master.css" type="text/css">
+</head>
+<body>
+    <header>Pathrika reader</header>
+
+    <script type="text/template" id="#feed-list"></script>
+    <script type="text/template" id="#article-list"></script>
+
+    <script src="{% static 'js/models/feed.js' %}"></script>
+    <script src="{% static 'js/models/article.js' %}"></script>
+    <script src="{% static 'js/collections/articles.js' %}"></script>
+    <script src="{% static 'js/collections/feeds.js' %}"></script>
+    <script src="{% static 'js/views/feeds.js' %}"></script>
+    <script src="{% static 'js/views/articles.js' %}"></script>
+    <script src="{% static 'js/routers/router.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+    <footer>
+        <p>Code at <a href="https://github.com/pcx/pathrika/">Github</a></p>
+    </footer>
+</body>
 </html>
