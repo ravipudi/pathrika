@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from feeder.forms import UrlForm
-from feeder.models import Feed
+from feeder.models import Feed, Article
 
 
 def add_feed(request):
@@ -18,3 +18,13 @@ def add_feed(request):
     return render(request, "add_feed.html",
                   {'form': urlform,
                    'success': success})
+
+
+def home(request):
+    feeds = Feed.objects.all()
+    articles = Article.objects.all()
+    context = {
+        'feeds': feeds,
+        'articles': articles,
+    }
+    return render(request, 'home.html', context)

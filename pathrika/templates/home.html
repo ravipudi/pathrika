@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="pure-g-r">
+    <div class="pure-u-1-5">
+      <nav class="pure-menu pure-menu-open" id="feeds">
+        <a class="pure-menu-heading" href="#">Feeds</a>
+        <ul id="feeds-ul">
+          {% for feed in feeds %}
+          <li><a href="{{ feed.id }}">{{ feed.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="pure-u-4-5">
+      <div id="controls">
+        <p>CONTROLS</p>
+      </div>
+      <div id="articles">
+        {% for article in articles %}
+        <li>
+          <a href="{{ article.url }}">{{ article.title }}</a>
+          <div>{{ article.content|safe }}</div>
+        </li>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

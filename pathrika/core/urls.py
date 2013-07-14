@@ -12,7 +12,8 @@ urlpatterns = patterns(
         name='add-feed'),
 
     url('^$',
-        TemplateView.as_view(template_name='index.html'),
+        #TemplateView.as_view(template_name='index.html'),
+        'feeder.views.home',
         name='home'),
 )
 
