@@ -1,7 +1,7 @@
 import datetime
 import calendar
 
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 import feedparser
 
 from feeder.models import Feed, Article
@@ -10,10 +10,7 @@ from feeder.models import Feed, Article
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        self.stdout.write("Phuck yo, management command works")
         feeds = Feed.objects.all()
-        from ipdb import set_trace
-        set_trace()
         for feed in feeds:
             f1 = feedparser.parse(feed.rss_url)
             if f1.get('bozo_exception'):
