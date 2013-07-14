@@ -1,3 +1,8 @@
+import os
+
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
+PUBLIC_DIR = os.path.join(PROJECT_DIR, '../public')
+TEMPLATES_DIR = os.path.join(PROJECT_DIR, '../templates')
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -47,11 +52,12 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    PUBLIC_DIR,
 )
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '%4vx-5a%o)w%-z&ncybf20++ftcxwar2y35)_mh5068m!p6#)o'
 
 TEMPLATE_DIRS = (
-    '/home/superxor/base/pathrika/templates',
+    TEMPLATES_DIR,
 )
