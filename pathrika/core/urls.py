@@ -23,6 +23,6 @@ v1_api.register(FeedResource())
 
 urlpatterns += patterns(
     '',
-    (r'^v1/',
+    (r'^api/',
      include(v1_api.urls)),
 )
