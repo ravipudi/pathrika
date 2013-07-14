@@ -18,8 +18,8 @@ urlpatterns = patterns(
 
 
 v1_api = Api(api_name='v1')
-v1_api.register(ArticleResource)
-v1_api.register(FeedResource)
+v1_api.register(ArticleResource())
+v1_api.register(FeedResource())
 
 urlpatterns += patterns(
     '',
