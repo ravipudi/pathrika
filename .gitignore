@@ -5,6 +5,6 @@
 .env
 pathrika_db
 pathrika/feeder/migrations
-pathrika/core/settins_local.py
+pathrika/core/settings_local.py
 Pathrika.egg-info/
 dist/
