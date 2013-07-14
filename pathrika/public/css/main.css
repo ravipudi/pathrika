@@ -5,15 +5,20 @@ body {
 }
 
 body {
-	font: 15px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
-	background: #eaeaea url('bg.png');
+	background: #eaeaea url('../img/bg.png');
 	color: #4d4d4d;
 	margin: 0 auto;
-	max-width: 1200px;
+	padding: 0 10px;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	-ms-font-smoothing: antialiased;
 	-o-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+}
+
+#articles,
+#controls {
+  padding-left: 10px;
 }
