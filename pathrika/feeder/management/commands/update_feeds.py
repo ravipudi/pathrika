@@ -34,7 +34,7 @@ class Command(BaseCommand):
                     url=entry.link,
                     rss_url=entry.title_detail.base,
                 )
-                if not created:
+                if created:
                     article.title = entry.title
                     article.summary = entry.summary
                     article.content = entry.content
