@@ -35,13 +35,16 @@ class Command(BaseCommand):
                     rss_url=entry.title_detail.base,
                 )
                 if created:
-                    article.title = entry.title
-                    article.summary = entry.summary
-                    article.content = entry.content
-                    article.author = entry.author
-                    article.published = datetime.datetime.fromtimestamp(
-                        calendar.timegm(entry.published_parsed)
-                    )
-                    article.save()
+                    try:
+                        article.title = entry.title
+                        article.summary = entry.summary
+                        article.content = entry.content
+                        article.author = entry.author
+                        article.published = datetime.datetime.fromtimestamp(
+                            calendar.timegm(entry.published_parsed)
+                        )
+                        article.save()
+                    except:
+                        self.stdout.write("Error");
                     self.stdout.write("Successfully added %s in %s feed" %
                                       (entry.title, f1.feed.title))
